@@ -1,0 +1,25 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^admin/log-out$ res/php/user_actions/log-out.php [QSA]
+RewriteRule ^log-out$ res/php/user_actions/log-out.php [QSA]
+
+#Rutas Admin
+RewriteRule ^admin/users$ admin/index.php?section=users [QSA]
+RewriteRule ^admin/articles$ admin/index.php?section=articles [QSA]
+RewriteRule ^admin/pages$ admin/index.php?section=pages [QSA]
+RewriteRule ^admin/sliders$ admin/index.php?section=sliders [QSA]
+RewriteRule ^admin/add-article$ admin/index.php?section=add-article [QSA]
+RewriteRule ^admin/add-page$ admin/index.php?section=add-page [QSA]
+RewriteRule ^admin/edit-page$ admin/index.php?section=edit-page [QSA]
+RewriteRule ^admin/edit-article$ admin/index.php?section=edit-article [QSA]
+RewriteRule ^admin/add-slider$ admin/index.php?section=add-slider [QSA]
+RewriteRule ^admin/categories$ admin/index.php?section=categories [QSA]
+RewriteRule ^admin/add-category$ admin/index.php?section=add-category [QSA]
+RewriteRule ^admin/configs$ admin/index.php?section=configs [QSA]
+
+#Rutas User
+RewriteRule ^user/register$ index.php?section=register [QSA]
+RewriteRule ^user/log-in$ index.php?section=log-in [QSA]
+RewriteRule ^articulos/(.+)$ index.php?section=article&alias=$1 [QSA]
+RewriteRule ^seccion/(.+)$ index.php?section=page&alias=$1 [QSA]
